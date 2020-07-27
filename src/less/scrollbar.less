@@ -1,0 +1,58 @@
+
+
+body, html  {
+	//overflow: overlay;
+    scrollbar-color: #bfbfbf #eeeeee;
+    scrollbar-width: thin;
+	
+	&.locked, &.locked body {
+		overflow: hidden;
+		height: 100%;
+		position: fixed;
+		width: 100%;
+	}   
+
+	&.locked {
+		//padding-right: 110px;
+		//box-sizing: border-box;
+	}
+
+	&.locked body {
+		//padding-right: 17px;
+		padding-right: 0;
+		position: relative;
+	}
+
+	*::-webkit-scrollbar {
+		width: 6px;
+
+		&-track {
+			border-radius: 10px;
+			background-color: transparent;
+		}
+
+		&-thumb {
+			border-radius: 10px;
+			background: rgba(0, 20, 51, 0.1);
+		}
+	}
+}
+
+@media screen and (-webkit-min-device-pixel-ratio:0)
+  and (min-resolution:.001dpcm) {
+	html.locked body {
+		padding-right: 0;
+	}
+}
+
+@-moz-document url-prefix() {
+	html.locked body {
+		padding-right: 8px;
+	}
+}
+
+_::-webkit-full-page-media, _:future, :root .safari_only {
+	html.locked body {
+		padding-right: 0;
+	}
+}

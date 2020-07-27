@@ -1,0 +1,57 @@
+//--------COLORS
+
+@white: #ffffff;
+@black: #001535;
+@success: #00FFA3;
+@warning: #FFF500;
+@danger: #FF0000;
+@active: #0066FF;
+@light_blue: #f2f7ff;
+@soft_yellow: #FFE485;
+@btn_active: #004A99;
+@btn_hover: #0062CC;
+@info_hover: #CCD6EB;
+@info_active: #B2C1E0;
+
+@placeholder: #d6d6d6;
+
+@disabled: #F2F4FA;
+@bg: #E5EAF5;
+
+//--------SHADOWS
+@btn_shadow: ~"0px 10px 10px rgba(0, 21, 53, 0.15)";
+@card_shadow: ~"0px 25px 15px rgba(0, 21, 53, 0.15)";
+
+//--------FONT-SIZES
+@25: 25px;
+
+// MEDIA
+@xs: 500px;
+@sm: 768px;
+@md: 992px;
+@lg: 1200px;
+@customlg: 1600px;
+@xl: 1920px;
+@xxl: 2561px;
+
+// MiXINS
+.up( @value, @rules ) {
+    @media only screen and (min-width: @value) {
+        @rules();
+    }
+}
+
+.down( @value, @rules ) {
+    @media only screen and (max-width: @value - 1) {
+        @rules();
+    }
+}
+
+.upLandscape( @value, @rules ) {
+    @media only screen and (min-width: @value) and (max-width: 900px) and (orientation:landscape) and (-webkit-min-device-pixel-ratio:2) {
+        @rules();
+    }
+}
+
+
+

@@ -1,0 +1,69 @@
+.DS_Store
+node_modules
+/dist
+/htdocs/build
+/htdocs/build/*
+/htdocs/index.html
+
+ /htdocs/3d
+ /htdocs/about/
+ /htdocs/about/*
+
+ /htdocs/articles/
+ /htdocs/articles/*
+ 
+ /htdocs/bitrix
+ /htdocs/excursions
+ /htdocs/excursions/
+ /htdocs/excursions/*
+
+/htdocs/news/
+/htdocs/news/*
+
+ 
+htdocs/services
+htdocs/services/*
+
+htdocs/ships
+htdocs/ships/*
+
+/htdocs/error/
+/htdocs/error/*
+
+/htdocs/error500/
+/htdocs/error500/*
+
+/htdocs/faq/
+/htdocs/faq/*
+
+/htdocs/feedback/
+/htdocs/gallery/
+
+/htdocs/management/
+
+/htdocs/policy/
+
+/htdocs/tariffs/
+
+htdocs/upload
+htdocs/upload/*
+
+
+# local env files
+.env
+.env.local
+.env.*.local
+
+# Log files
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Editor directories and files
+.idea
+.vscode
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?

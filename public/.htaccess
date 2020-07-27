@@ -1,0 +1,75 @@
+Options Indexes FollowSymLinks
+RewriteEngine On
+
+# по умолчанию - все направляем на actions/AppPage:
+RewriteCond %{REQUEST_FILENAME} !-f
+#RewriteCond %{REQUEST_FILENAME} !-d
+#RewriteCond %{REQUEST_FILENAME}/index.html !-f
+RewriteCond %{REQUEST_URI}	!^\/api\/		[NC]
+RewriteCond %{REQUEST_URI}	!^\/i\/		[NC]
+RewriteCond %{REQUEST_URI}	!^\/css\/		[NC]
+RewriteCond %{REQUEST_URI}	!^\/js\/		[NC]
+#RewriteRule	^.*$	/E7.php?a=AppPage	[QSA,L]
+RewriteRule	^.*$	/index.html				[QSA,L]
+
+
+# SEO - сжатие файлов
+<IfModule mod_deflate.c>
+    AddOutputFilterByType DEFLATE application/javascript
+    AddOutputFilterByType DEFLATE application/json
+    AddOutputFilterByType DEFLATE application/x-javascript
+    AddOutputFilterByType DEFLATE text/javascript
+    AddOutputFilterByType DEFLATE text/css
+    AddOutputFilterByType DEFLATE text/text
+    AddOutputFilterByType DEFLATE text/html
+    AddOutputFilterByType DEFLATE text/plain
+    AddOutputFilterByType DEFLATE text/xml
+    AddOutputFilterByType DEFLATE image/svg+xml
+    <IfModule mod_setenvif.c>
+        BrowserMatch ^Mozilla/4 gzip-only-text/html
+        BrowserMatch ^Mozilla/4\.0[678] no-gzip
+        BrowserMatch \bMSIE !no-gzip !gzip-only-text/html
+    </IfModule>
+</IfModule>
+
+# SEO - экспайринг
+<IfModule mod_expires.c>
+    ExpiresActive On
+    #ExpiresDefault "access 7 days"
+
+    # JSON кэшируется на уровне API-контроллеров
+    #ExpiresByType text/plain "access plus 30 minutes"
+    #ExpiresByType application/json "access plus 30 minutes"
+
+    # JS/CSS
+    ExpiresByType application/javascript "access plus 4 hours"
+    ExpiresByType text/javascript "access plus 4 hours"
+    ExpiresByType text/x-javascript "access 4 hours"
+    ExpiresByType text/css "access plus 4 hours"
+
+    # images, multimedia
+    ExpiresByType image/gif "access plus 1 month"
+    ExpiresByType image/jpeg "access plus 1 month"
+    ExpiresByType image/png "access plus 1 month"
+    ExpiresByType image/jpg "access plus 1 month"
+    ExpiresByType image/x-icon "access 1 month"
+    ExpiresByType image/svg+xml "access 1 month"
+    ExpiresByType video/mp4 "access 1 month"
+    ExpiresByType video/x-ms-wmv "access 1 month"
+    ExpiresByType video/x-msvideo "access 1 month"
+    ExpiresByType video/quicktime "access 1 month"
+    ExpiresByType video/3gpp "access 1 month"
+    ExpiresByType video/MP2T "access 1 month"
+    ExpiresByType video/x-flv "access 1 month"
+    ExpiresByType application/x-mpegURL "access 1 month"
+    ExpiresByType application/x-shockwave-flash "access 1 month"
+
+    # fonts
+    ExpiresByType application/x-font-ttf "access plus 1 month"
+    ExpiresByType application/x-font-woff "access plus 1 month"
+    ExpiresByType application/vnd.ms-fontobject "access plus 1 month"
+    ExpiresByType font/opentype "access plus 1 month"
+
+    # HTML - установливается битриксом
+    #ExpiresByType text/html "access plus 7 days"
+</IfModule>

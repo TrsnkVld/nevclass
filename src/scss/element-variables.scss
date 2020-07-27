@@ -1,0 +1,54 @@
+/* Break-point
+--------------------------*/
+$--sm: 768px !default;
+$--md: 992px !default;
+$--lg: 1200px !default;
+$--xl: 1920px !default;
+
+
+
+
+$--button-default-background-color: #ffffff;
+$--button-primary-background-color: #0066FF;
+$--button-default-font-color: #001535;
+
+$--color-primary: #0066FF;
+$--color-success: #00FFA3;
+$--color-warning: #FF9900;
+$--color-danger: #FF0000;
+$--color-info: #CCD6EB;
+
+$--color-text-primary: #001535;
+
+$--button-padding-vertical: 23px;
+
+$--button-border-radius: 100px;
+//$--border-radius-base: 100px;
+
+/*---- SELECT ----*/
+$--select-font-size: 25px;
+$--select-input-font-size: 25px;
+$--font-size-base: 25px;
+
+$--box-shadow-light: 0px 10px 10px rgba(0, 21, 53, 0.12);
+$--select-dropdown-border: none;
+$--select-option-color: #001535;
+$--select-option-hover-background: rgba(0, 102, 255, .1);
+$--select-multiple-input-color: white;
+
+
+
+/*
+@include b(button) {
+	&:hover,
+	&:focus {
+	  color: $--color-primary;
+	  border-color: $--color-primary-light-7;
+	  background-color: $--color-primary-light-9;
+	}
+}
+*/
+/* icon font path, required */
+$--font-path: '~element-ui/lib/theme-chalk/fonts';
+
+@import "~element-ui/packages/theme-chalk/src/index";

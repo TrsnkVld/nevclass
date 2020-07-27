@@ -1,0 +1,49 @@
+$aos-distance: 40px;
+$aos-scale: .9;
+
+@import 'aos/src/sass/aos.scss';
+
+
+[data-aos] {
+	@for $i from 1 through 120 {
+		body[data-aos-duration='#{$i * 50}'] &,
+		&[data-aos][data-aos-duration='#{$i * 50}'] {
+			transition-duration: #{$i * 50}ms;
+		}
+
+		body[data-aos-delay='#{$i * 50}'] &,
+		&[data-aos][data-aos-delay='#{$i * 50}'] {
+			transition-delay: 0s;
+
+			&.aos-animate {
+				transition-delay: #{$i * 50}ms;
+			}
+		}
+	}
+}
+
+html:not(.no-js) {
+	[data-aos='zoom-in'] {
+		transform: scale($aos-scale);
+	}
+
+	[data-aos='zoom-in-up'] {
+		transform: translate3d(0, $aos-distance, 0) scale($aos-scale);
+	}
+
+	[data-aos='zoom-in-down'] {
+		transform: translate3d(0, -$aos-distance, 0) scale($aos-scale);
+	}
+
+	[data-aos='zoom-in-right'] {
+		transform: translate3d(-$aos-distance, 0, 0) scale($aos-scale);
+	}
+
+	[data-aos='zoom-in-left'] {
+		transform: translate3d($aos-distance, 0, 0) scale($aos-scale);
+	}
+}
+
+[data-aos] {
+	pointer-events: auto;
+}

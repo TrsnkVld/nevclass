@@ -1,0 +1,111 @@
+{
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "spb"
+      },
+      "geometry": {
+        "coordinates": [
+          30.375032,
+          59.951465
+        ],
+        "type": "Point"
+      },
+      "id": "3537b6f901e9d6b84e69abd6118cb976"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "peterhof"
+      },
+      "geometry": {
+        "coordinates": [
+          29.911685,
+          59.890468
+        ],
+        "type": "Point"
+      },
+      "id": "548802d806d057173c10d17c811999bc"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "oreshek"
+      },
+      "geometry": {
+        "coordinates": [
+          31.040259,
+          59.954249
+        ],
+        "type": "Point"
+      },
+      "id": "b57541d4a207639906a37675771f9527"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "rivers"
+      },
+      "geometry": {
+        "coordinates": [
+          30.305518,
+          59.927035
+        ],
+        "type": "Point"
+      },
+      "id": "e2ca2e55fe52aeffff7ba2749f982de9"
+    },
+    {
+      "type": "Feature",
+      "properties": {},
+      "geometry": {
+        "coordinates": [
+          [
+            29.912205,
+            59.891075
+          ],
+          [
+            29.952316,
+            59.918241
+          ],
+          [
+            30.037537,
+            59.950015
+          ],
+          [
+            30.108402,
+            59.963431
+          ],
+          [
+            30.166678,
+            59.968616
+          ],
+          [
+            30.210392,
+            59.9657
+          ],
+          [
+            30.25528,
+            59.958893
+          ],
+          [
+            30.279471,
+            59.950842
+          ],
+          [
+            30.308696,
+            59.945491
+          ],
+          [
+            30.311507,
+            59.937689
+          ]
+        ],
+        "type": "LineString"
+      },
+      "id": "f90e159958fe4dc037083692d8c56ed8"
+    }
+  ],
+  "type": "FeatureCollection"
+}
